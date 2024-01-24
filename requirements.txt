@@ -8,3 +8,4 @@ Pillow==10.0.1
 email_validator
 itsdangerous==2.0.0
 gunicorn
+werkzeug==2.3.8
