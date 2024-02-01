@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: flaskproject
-        image: gulerkandeger/flask-blogapp:v2
+        image: gulerkandeger/flask-blogapp:v3
         ports:
         - containerPort: 8080
