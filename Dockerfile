@@ -1,9 +1,18 @@
-FROM python:3.9
+# Kullanılacak temel imajı belirle
+FROM python:3.8-slim-buster
 
-COPY . /app
-
+# Çalışma dizinini belirle
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+# Bulunduğumuz dizindeki dosyaları container içine kopyala
+COPY . /app
 
-ENTRYPOINT python3 run.py
+# requirements.txt dosyasındaki gerekli paketleri yükle
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Dünya adında bir ortam değişkeni tanımla
+ENV NAME World
+
+EXPOSE 5000
+# Container başlatıldığında app.py dosyasını çalıştır
+CMD [ "python3" , "run.py"]
