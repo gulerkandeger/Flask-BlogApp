@@ -9,3 +9,4 @@ email_validator
 itsdangerous==2.0.0
 gunicorn
 werkzeug==2.3.8
+dnspython>=2.6.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
